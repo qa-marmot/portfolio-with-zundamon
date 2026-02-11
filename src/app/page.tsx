@@ -75,7 +75,9 @@ export default function Home() {
 
   const LOCAL_VOICEVOX =
     process.env.NEXT_PUBLIC_VOICEVOX_ENDPOINT ?? "http://localhost:50021";
-  const REMOTE_VOICEVOX = "https://api.tts.quest/v3/voicevox";
+
+  const REMOTE_VOICEVOX = "https://deprecatedapis.tts.quest/v2/voicevox/audio/";
+
   const VOICEVOX_API_KEY = process.env.NEXT_PUBLIC_VOICEVOX_API_KEY;
 
   // ローカルが生きているかチェック
@@ -190,27 +192,50 @@ export default function Home() {
         // =========================
         // リモート VOICEVOX（tts.quest）
         // =========================
+        // =========================
+        const params = new URLSearchParams({
+          key: VOICEVOX_API_KEY ?? "",
+          text,
+          speaker: "0",
+          pitch: "0",
+          intonationScale: "1",
+          speed: "1",
+        });
+
         const remoteRes = await fetch(
-          `${REMOTE_VOICEVOX}?text=${encodeURIComponent(text)}&speaker=1&key=${VOICEVOX_API_KEY}`,
-          { method: "GET", signal: controller.signal },
+          `${REMOTE_VOICEVOX}?${params.toString()}`,
+          {
+            method: "GET",
+            signal: controller.signal,
+          },
         );
 
-        if (!remoteRes.ok) throw new Error("remote voicevox failed");
+        if (!remoteRes.ok) {
+          const msg = await remoteRes.text();
+          throw new Error(`remote voicevox failed: ${msg}`);
+        }
 
         const arrayBuffer = await remoteRes.arrayBuffer();
         const blob = new Blob([arrayBuffer], { type: "audio/wav" });
 
-        if (cacheKey) audioCacheRef.current[cacheKey] = blob;
+        if (cacheKey) {
+          audioCacheRef.current[cacheKey] = blob;
+        }
+
         return blob;
-      } catch (e: any) {
-        if (e.name !== "AbortError") {
+      } catch (e) {
+        if (controller.signal.aborted) {
+          console.log("Voice generation aborted");
+        } else {
           console.error("Voice generation error:", e);
         }
         return null;
+      } finally {
+        abortControllerRef.current = null;
       }
     },
     [],
-  );
+  );  
 
   // -------------------------
   //  音声再生
