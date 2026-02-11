@@ -1,0 +1,143 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamMouthOpen",
+			"GroupId": "",
+			"Name": "口"
+		},
+		{
+			"Id": "ParamArmR",
+			"GroupId": "",
+			"Name": "右腕"
+		},
+		{
+			"Id": "ParamEyeOpen",
+			"GroupId": "",
+			"Name": "目"
+		}
+	],
+	"ParameterGroups": [],
+	"Parts": [
+		{
+			"Id": "Part15",
+			"Name": "ずんだもん立ち絵素材2.3.psd"
+		},
+		{
+			"Id": "PartRough",
+			"Name": "ラフ"
+		},
+		{
+			"Id": "PartFace",
+			"Name": "顔"
+		},
+		{
+			"Id": "PartEye",
+			"Name": "目"
+		},
+		{
+			"Id": "PartEyeBall",
+			"Name": "目玉"
+		},
+		{
+			"Id": "PartBrow",
+			"Name": "まゆ毛"
+		},
+		{
+			"Id": "PartMouth",
+			"Name": "口"
+		},
+		{
+			"Id": "PartNose",
+			"Name": "鼻"
+		},
+		{
+			"Id": "PartEar",
+			"Name": "耳"
+		},
+		{
+			"Id": "PartHairFront",
+			"Name": "前髪"
+		},
+		{
+			"Id": "PartHairSide",
+			"Name": "横髪"
+		},
+		{
+			"Id": "PartHairBack",
+			"Name": "後ろ髪"
+		},
+		{
+			"Id": "PartNeck",
+			"Name": "首"
+		},
+		{
+			"Id": "PartBody",
+			"Name": "体"
+		},
+		{
+			"Id": "PartBackground",
+			"Name": "背景"
+		},
+		{
+			"Id": "PartSketch",
+			"Name": "[ 下絵 ]"
+		},
+		{
+			"Id": "Part",
+			"Name": "記号など"
+		},
+		{
+			"Id": "Part2",
+			"Name": "!枝豆"
+		},
+		{
+			"Id": "Part3",
+			"Name": "!眉"
+		},
+		{
+			"Id": "Part4",
+			"Name": "!目"
+		},
+		{
+			"Id": "Part7",
+			"Name": "!顔色"
+		},
+		{
+			"Id": "Part8",
+			"Name": "!口"
+		},
+		{
+			"Id": "Part9",
+			"Name": "*服装1"
+		},
+		{
+			"Id": "Part12",
+			"Name": "*服装2"
+		},
+		{
+			"Id": "Part5",
+			"Name": "*目セット"
+		},
+		{
+			"Id": "Part10",
+			"Name": "!右腕"
+		},
+		{
+			"Id": "Part11",
+			"Name": "!左腕"
+		},
+		{
+			"Id": "Part13",
+			"Name": "!左腕"
+		},
+		{
+			"Id": "Part14",
+			"Name": "!右腕"
+		},
+		{
+			"Id": "Part6",
+			"Name": "!黒目"
+		}
+	]
+}
