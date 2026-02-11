@@ -196,7 +196,7 @@ export default function Home() {
         const params = new URLSearchParams({
           key: VOICEVOX_API_KEY ?? "",
           text,
-          speaker: "0",
+          speaker: "1",
           pitch: "0",
           intonationScale: "1",
           speed: "1",
