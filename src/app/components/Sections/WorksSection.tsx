@@ -62,8 +62,8 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
     <section className="flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 overflow-y-auto py-20">
       <div className="container mx-auto px-8">
         {/* タイトルとナビゲーションボタン */}
-        <div className="flex items-center justify-between mb-12 max-w-4xl mx-auto">
-          <h2 className="section-title text-3xl font-bold">Works</h2>
+        <div className="flex items-center justify-between mb-12 max-w-2xl mx-auto">
+          <h2 className="section-title font-bold">Works</h2>
 
           <div className="flex gap-2">
             <button
