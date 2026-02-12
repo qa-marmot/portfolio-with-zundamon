@@ -164,7 +164,7 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
                       href={work.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mt-3 px-6 py-2 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition-colors duration-200"
+                      className="inline-block mt-3 px-6 py-2 bg-zunda-secondary text-white font-medium rounded-xl hover:bg-zunda-dark transition-colors duration-200"
                     >
                       View Project
                     </a>
