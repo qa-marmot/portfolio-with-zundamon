@@ -70,7 +70,7 @@ export default function Home() {
   const skillSpeechMap = {
     frontend: `フロントエンドなのだ!まずHTMLで構造を作って、CSSで見た目を整えるのだ。JavaScriptで動きをつけて、ReactやNext.jsで画面を効率よく組み立ててるのだ!TypeScriptで安全に開発して、Tailwind CSSでスタイルを管理してるのだ。必要に応じてjQueryも使うのだ!`,
     backend: `バックエンドなのだ!Node.jsやPython、PHPを使って、サーバー側の処理を書くのだ。FastAPIで高速なAPIを作って、フロントエンドと連携したりしてるのだ。Supabaseを使って、データベースや認証もまとめて管理してるのだ！`,
-    devops: `開発を支える技術たちなのだ!Dockerで開発環境をそろえて、誰でも同じ環境で動かせるようにするのだ。GitHubでコードを管理して、PlaywrightやSeleniumでテストを自動化!JiraやSlack、Confluenceを使った経験もあるのだ!`,
+    devops: `開発を支える技術たちなのだ! Dockerで開発環境をそろえて、誰でも同じ環境で動かせるようにするのだ。GitHubでコードを管理して、PlaywrightやSeleniumでテストを自動化! JiraやSlack、Confluenceを使った経験もあるのだ!`,
   } as const;
 
   const LOCAL_VOICEVOX =

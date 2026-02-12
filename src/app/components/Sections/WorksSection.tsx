@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 
 interface WorksSectionProps {
   onWorkClick?: (work: { title: string; description: string }) => void;
@@ -9,22 +10,27 @@ interface WorksSectionProps {
 export default function WorksSection({ onWorkClick }: WorksSectionProps) {
   const works = [
     {
-      title: "プロジェクト名",
-      description: "このサイトは○○を目的に作ったWebアプリなのだ!",
-      tech: ["dummy", "dummy", "dummy", "dummy"],
-      image: "dummy",
+      title: "JavaScript勉強サイト",
+      description:
+        "技術構成はNext.js × TailwindCSSでモダンに仕上げ、裏側はSupabaseでしっかり支えているのだ。デプロイ先はVercelを選んで、安定したJavaScript勉強サイトを目指したのだ!",
+      tech: ["React", "Next.js", "Tailwindcss", "Supabase", "Vercel"],
+      image: "/image/javascript-exam-app.png",
+      url: "https://javascript-exam-app.vercel.app/",
     },
     {
-      title: "プロジェクト名",
-      description: "チャット機能を中心にしたサービスなのだ！",
-      tech: ["dummy", "dummy", "dummy", "dummy"],
-      image: "dummy",
+      title: "順番待ちシステム",
+      description:
+        "中身の構造にもこだわった「順番待ちシステム」なのだ!セマンティックHTMLを意識して、どこに何が書いてあるかブラウザにも優しく伝わるように作ったのだ!管理画面はhttps://qa-marmot.github.io/queue-system/staff.htmlで遷移できるのだ!",
+      tech: ["html", "css", "Javascript", "jQuery"],
+      image: "/image/queue-system.png",
+      url: "https://qa-marmot.github.io/queue-system/",
     },
     {
       title: "プロジェクト名",
       description: "デザイン重視で制作した作品なのだ！",
       tech: ["dummy", "dummy", "dummy", "dummy"],
-      image: "dummy",
+      image: "/image/dummy.png",
+      url: "#",
     },
   ];
 
@@ -55,10 +61,10 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
   return (
     <section className="flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 overflow-y-auto py-20">
       <div className="container mx-auto px-8">
-        {/* タイトルとナビゲーションボタンを横並びに */}
+        {/* タイトルとナビゲーションボタン */}
         <div className="flex items-center justify-between mb-12 max-w-4xl mx-auto">
-          <h2 className="section-title">Works</h2>
-          
+          <h2 className="section-title text-3xl font-bold">Works</h2>
+
           <div className="flex gap-2">
             <button
               onClick={handlePrevious}
@@ -79,7 +85,7 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
                 />
               </svg>
             </button>
-            
+
             <button
               onClick={handleNext}
               className="bg-white hover:bg-gray-50 rounded-full p-2 shadow-md transition-all duration-200 hover:scale-110"
@@ -103,7 +109,7 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
         </div>
 
         <div className="relative max-w-2xl mx-auto">
-          {/* カルーセル本体 */}
+          {/* カルーセル */}
           <div
             ref={carouselRef}
             className="flex overflow-x-scroll snap-x snap-mandatory scrollbar-hide gap-8 pb-4"
@@ -121,14 +127,27 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
                       description: work.description,
                     })
                   }
-                  className="card cursor-pointer rounded-3xl transform hover:scale-105 transition-transform duration-300 h-full"
+                  className="card cursor-pointer rounded-3xl transform hover:scale-105 transition-transform duration-300 h-full p-4 bg-white shadow-lg"
                 >
-                  <div className="text-6xl text-center mb-4">{work.image}</div>
-                  <h3 className="text-2xl font-bold mb-3 text-gray-800">
+                  {/* 画像 */}
+                  <div className="relative w-full h-80 mb-4 rounded-3xl overflow-hidden bg-gray-100">
+                    <Image
+                      src={work.image}
+                      alt={work.title}
+                      fill
+                      className="object-contain rounded-3xl"
+                      sizes="(max-width: 768px) 100vw, 600px"
+                      priority={index === 0}
+                    />
+                  </div>
+
+                  {/* タイトル */}
+                  <h3 className="text-2xl text-center font-bold mt-2 mb-4 text-gray-800">
                     {work.title}
                   </h3>
 
-                  <div className="flex flex-wrap gap-2">
+                  {/* 技術タグ */}
+                  <div className="flex flex-wrap gap-2 justify-center mb-4">
                     {work.tech.map((tech, i) => (
                       <span
                         key={i}
@@ -137,6 +156,18 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
                         {tech}
                       </span>
                     ))}
+                  </div>
+
+                  {/* ポートフォリオリンクボタン */}
+                  <div className="text-center mt-2">
+                    <a
+                      href={work.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-3 px-6 py-2 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition-colors duration-200"
+                    >
+                      View Project
+                    </a>
                   </div>
                 </div>
               </div>
