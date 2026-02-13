@@ -13,7 +13,7 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
       title: "JavaScript勉強サイト",
       description:
         "技術構成はNext.js × TailwindCSSでモダンに仕上げ、裏側はSupabaseでしっかり支えているのだ。デプロイ先はVercelを選んで、安定したJavaScript勉強サイトを目指したのだ!",
-      tech: ["React", "Next.js", "Tailwindcss", "Supabase", "Vercel"],
+      tech: ["React", "Next.js", "TypeScript", "Tailwindcss", "Supabase", "Vercel"],
       image: "/image/javascript-exam-app.png",
       url: "https://javascript-exam-app.vercel.app/",
     },
@@ -28,9 +28,16 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
     {
       title: "カタカナーシ",
       description: "カタカナーシは、カタカナなしでお題を説明するゲームなのだ!バックエンドはFastAPIとWebSocketsを使用してリアルタイム通信を実現しているのだ!さらに、Dockerを活用して開発環境を整え、VercelとRenderにデプロイして、どこからでもアクセスできるようにしたのだ!",
-      tech: ["React", "Python", "FastAPI", "WebSockets", "Docker", "Vercel", "Render"],
+      tech: ["React", "Python", "TypeScript", "FastAPI", "WebSockets", "Docker", "Vercel", "Render"],
       image: "/image/katakana-shi.png",
       url: "https://katakana-zus637ooi-qamamomamos-projects.vercel.app/",
+    },
+    {
+      title: "Hair Famille",
+      description: "いとこの理容室ホームページを清潔感と信頼性を重視して作成したのだ! Next.js + TypeScript + Tailwind CSSで構築し、完全レスポンシブ対応しているのだ!",
+      tech: ["Next.js", "TypeScript", "Tailwindcss", "microCMS", "vercel"],
+      image: "/image/hair-famille.png",
+      url: "https://hair-famille-website.vercel.app/",
     },
   ];
 
