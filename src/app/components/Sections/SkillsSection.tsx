@@ -41,11 +41,14 @@ export default function SkillsSection({ onSkillClick }: Props) {
       items: [
         "Docker",
         "GitHub",
+        "Vercel",
+        "Render",
         "Playwright",
         "Selenium",
         "Jira",
         "Slack",
         "Confluence",
+        "Figma",
       ],
     },
   ];
