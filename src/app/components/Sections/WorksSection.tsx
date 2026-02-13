@@ -34,7 +34,7 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
     },
     {
       title: "Hair Famille",
-      description: "いとこの理容室ホームページを清潔感と信頼性を重視して作成したのだ! Next.js + TypeScript + Tailwind CSSで構築し、完全レスポンシブ対応しているのだ!",
+      description: "いとこの理容室ホームページを清潔感と信頼性を重視して作成したのだ! Next.js + TypeScript + Tailwind CSSで構築し、完全レスポンシブ対応しているのだ! 髪を切りたくなった時は、迷わずここに来てほしいのだ!",
       tech: ["Next.js", "TypeScript", "Tailwindcss", "microCMS", "vercel"],
       image: "/image/hair-famille.png",
       url: "https://hair-famille-website.vercel.app/",
@@ -120,8 +120,7 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
             {/* カルーセル */}
             <div
               ref={carouselRef}
-              className="flex overflow-x-scroll snap-x snap-mandatory scrollbar-hide gap-8 pb-4"
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              className="flex overflow-x-scroll snap-x snap-mandatory scrollbar-hide gap-8 pb-4 carousel-container"
             >
               {works.map((work, index) => (
                 <div
@@ -203,6 +202,10 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
         <style jsx>{`
           .scrollbar-hide::-webkit-scrollbar {
             display: none;
+          }
+          .carousel-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
           }
         `}</style>
       </section>
