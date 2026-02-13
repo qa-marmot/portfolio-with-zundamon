@@ -21,16 +21,16 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
       title: "順番待ちシステム",
       description:
         "中身の構造にもこだわった「順番待ちシステム」なのだ!セマンティックHTMLを意識して、どこに何が書いてあるかブラウザにも優しく伝わるように作ったのだ!管理画面はhttps://qa-marmot.github.io/queue-system/staff.htmlで遷移できるのだ!",
-      tech: ["html", "css", "Javascript", "jQuery"],
+      tech: ["html", "css", "Javascript", "jQuery", "GitHub Pages"],
       image: "/image/queue-system.png",
       url: "https://qa-marmot.github.io/queue-system/",
     },
     {
-      title: "プロジェクト名",
-      description: "デザイン重視で制作した作品なのだ！",
-      tech: ["dummy", "dummy", "dummy", "dummy"],
-      image: "/image/dummy.png",
-      url: "#",
+      title: "カタカナーシ",
+      description: "カタカナーシは、カタカナなしでお題を説明するゲームなのだ!バックエンドはFastAPIとWebSocketsを使用してリアルタイム通信を実現しているのだ!さらに、Dockerを活用して開発環境を整え、VercelとRenderにデプロイして、どこからでもアクセスできるようにしたのだ!",
+      tech: ["React", "Python", "FastAPI", "WebSockets", "Docker", "Vercel", "Render"],
+      image: "/image/katakana-shi.png",
+      url: "https://katakana-zus637ooi-qamamomamos-projects.vercel.app/",
     },
   ];
 
