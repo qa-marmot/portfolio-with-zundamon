@@ -47,7 +47,7 @@ export default function SpeechBubble({
       return;
     }
 
-    // ★ 今回処理する text を固定
+    // 処理する text を固定
     activeTextRef.current = text;
     setDisplayText('');
     indexRef.current = 0;
@@ -60,7 +60,7 @@ export default function SpeechBubble({
       const currentText = activeTextRef.current;
       const i = indexRef.current;
 
-      // ★ undefined 防止（最重要）
+      //  undefined 防止
       if (i >= currentText.length) {
         // typing 完了
         if (onComplete) {

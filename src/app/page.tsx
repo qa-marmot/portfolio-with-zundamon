@@ -159,7 +159,7 @@ export default function Home() {
       abortControllerRef.current = controller;
 
       try {
-        const useLocal = await checkLocalVoicevox();
+        const useLocal: boolean = await checkLocalVoicevox();
 
         // =========================
         // ローカル VOICEVOX
@@ -191,7 +191,6 @@ export default function Home() {
 
         // =========================
         // リモート VOICEVOX（tts.quest）
-        // =========================
         // =========================
         const params = new URLSearchParams({
           key: VOICEVOX_API_KEY ?? "",

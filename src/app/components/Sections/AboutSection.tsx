@@ -4,7 +4,6 @@ export default function AboutSection() {
   return (
     <section className="flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 pt-20 sm:pt-24 md:pt-28 min-h-screen">
       <div className="container mx-auto px-6 max-w-4xl flex justify-center">
-        {/* PCでは自動高さ、モバイルのみスクロール */}
         <div className="card bg-white rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg w-full
                         overflow-auto max-h-[90vh] md:overflow-visible md:max-h-none">
           
