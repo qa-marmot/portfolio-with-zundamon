@@ -45,9 +45,6 @@ export default function VoiceToggle({ enabled, onToggle }: VoiceToggleProps) {
           </svg>
         )}
       </div>
-      <span className="absolute -bottom-8 right-0 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-        {enabled ? "音声ON" : "音声OFF"}
-      </span>
     </button>
   );
 }
