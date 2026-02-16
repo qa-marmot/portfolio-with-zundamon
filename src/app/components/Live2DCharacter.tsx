@@ -151,7 +151,7 @@ export default function Live2DCharacter({ onReady, currentSection }: Live2DChara
   }, [onReady]);
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="hidden lg:block fixed bottom-4 right-4 z-50">
       <div ref={canvasRef} className="relative">
         {isLoading && (
           <div className="w-[300px] h-[400px] flex items-center justify-center bg-zunda-primary/20 rounded-lg">

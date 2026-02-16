@@ -2,34 +2,34 @@
 
 export default function AboutSection() {
   return (
-    <section className="flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50">
-      <div className="container mt-8 mx-auto px-8 max-w-4xl">
-        <h2 className="section-title text-center mb-12">About Me</h2>
-        <div className="card">
-          <div className="text-center mb-8">
-            <div className="w-32 h-32 bg-gradient-to-br from-zunda-primary to-zunda-secondary rounded-full mx-auto mb-4 flex items-center justify-center text-6xl">
-              <img src="./image/QAmamo.png" alt="プロフィール画像" />
+    <section className="flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 pt-20 sm:pt-24 md:pt-28 min-h-screen">
+      <div className="container mx-auto px-6 max-w-4xl flex justify-center">
+        {/* PCでは自動高さ、モバイルのみスクロール */}
+        <div className="card bg-white rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg w-full
+                        overflow-auto max-h-[90vh] md:overflow-visible md:max-h-none">
+          
+          {/* 上部: プロフィール */}
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="w-32 h-32 bg-gradient-to-br from-zunda-primary to-zunda-secondary rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+              <img src="./image/QAmamo.png" alt="プロフィール画像" className="object-cover w-full h-full" />
             </div>
             <h3 className="text-3xl font-bold text-gray-800 mb-2">薮下 海大</h3>
             <p className="text-xl text-gray-600">QA&Web Engineer</p>
           </div>
 
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p className="mb-4">
+          {/* 中央: 自己紹介 */}
+          <div className="prose prose-lg max-w-none text-gray-700 mb-6 sm:mb-3">
+            <p className="mb-4 sm:mb-2">
               QAエンジニアとして2年以上の経験があります。
               フロントエンドからバックエンドの実装、テストまで幅広く対応可能です。
             </p>
-            <p className="mb-4">
-              特にReact/Next.jsを使用したモダンなWebアプリケーション開発、Python/Node.jsを用いたテスト自動化を学習中で
-              UI/UXにこだわった開発を心がけています。
-            </p>
-            <p>
-              最近はセキュリティ領域やLive2Dにも興味があり、
-              技術の幅を広げています。
+            <p className="mb-4 sm:mb-2">
+              特にReact/Next.jsを使用したモダンなWebアプリケーション開発、Python/Node.jsを用いたE2Eテスト自動化を学習中です。
             </p>
           </div>
 
-          <div className="mt-8 flex justify-center gap-6">
+          {/* 下部: SNSリンク */}
+          <div className="mt-4 sm:mt-6 flex justify-center gap-6 flex-wrap">
             <a
               href="https://github.com/qa-marmot"
               target="_blank"

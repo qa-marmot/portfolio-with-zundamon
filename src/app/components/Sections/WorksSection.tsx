@@ -13,7 +13,14 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
       title: "JavaScript勉強サイト",
       description:
         "技術構成はNext.js × TailwindCSSでモダンに仕上げ、裏側はSupabaseでしっかり支えているのだ。デプロイ先はVercelを選んで、安定したJavaScript勉強サイトを目指したのだ!",
-      tech: ["React", "Next.js", "TypeScript", "Tailwindcss", "Supabase", "Vercel"],
+      tech: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwindcss",
+        "Supabase",
+        "Vercel",
+      ],
       image: "/image/javascript-exam-app.png",
       url: "https://javascript-exam-app.vercel.app/",
     },
@@ -27,14 +34,25 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
     },
     {
       title: "カタカナーシ",
-      description: "カタカナーシは、カタカナなしでお題を説明するゲームなのだ!バックエンドはFastAPIとWebSocketsを使用してリアルタイム通信を実現しているのだ!さらに、Dockerを活用して開発環境を整え、VercelとRenderにデプロイして、どこからでもアクセスできるようにしたのだ!",
-      tech: ["React", "Python", "TypeScript", "FastAPI", "WebSockets", "Docker", "Vercel", "Render"],
+      description:
+        "カタカナーシは、カタカナなしでお題を説明するゲームなのだ!バックエンドはFastAPIとWebSocketsを使用してリアルタイム通信を実現しているのだ!さらに、Dockerを活用して開発環境を整え、VercelとRenderにデプロイして、どこからでもアクセスできるようにしたのだ!",
+      tech: [
+        "React",
+        "Python",
+        "TypeScript",
+        "FastAPI",
+        "WebSockets",
+        "Docker",
+        "Vercel",
+        "Render",
+      ],
       image: "/image/katakana-shi.png",
       url: "https://katakana-zus637ooi-qamamomamos-projects.vercel.app/",
     },
     {
       title: "Hair Famille",
-      description: "いとこの理容室ホームページを清潔感と信頼性を重視して作成したのだ! Next.js + TypeScript + Tailwind CSSで構築し、完全レスポンシブ対応しているのだ! 髪を切りたくなった時は、迷わずここに来てほしいのだ!",
+      description:
+        "いとこの理容室ホームページを清潔感と信頼性を重視して作成したのだ! Next.js + TypeScript + Tailwind CSSで構築し、完全レスポンシブ対応しているのだ! 髪を切りたくなった時は、迷わずここに来てほしいのだ!",
       tech: ["Next.js", "TypeScript", "Tailwindcss", "microCMS", "vercel"],
       image: "/image/hair-famille.png",
       url: "https://hair-famille-website.vercel.app/",
@@ -67,20 +85,22 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-12 md:py-24">
-        <div className="container mx-auto px-8">
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-32 md:pb-24">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8">
           {/* タイトルとナビゲーションボタン */}
-          <div className="flex items-center justify-between mb-8 md:mb-10 max-w-2xl mx-auto">
-            <h2 className="section-title font-bold">Works</h2>
+          <div className="flex items-center justify-between mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto">
+            <h2 className="section-title">
+              Works
+            </h2>
 
             <div className="flex gap-2">
               <button
                 onClick={handlePrevious}
-                className="bg-white hover:bg-gray-50 rounded-full p-2 shadow-md transition-all duration-200 hover:scale-110"
+                className="bg-white hover:bg-gray-50 rounded-full p-2 sm:p-3 shadow-md transition-all duration-200 hover:scale-110"
                 aria-label="前へ"
               >
                 <svg
-                  className="w-5 h-5 text-gray-800"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -96,11 +116,11 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
 
               <button
                 onClick={handleNext}
-                className="bg-white hover:bg-gray-50 rounded-full p-2 shadow-md transition-all duration-200 hover:scale-110"
+                className="bg-white hover:bg-gray-50 rounded-full p-2 sm:p-3 shadow-md transition-all duration-200 hover:scale-110"
                 aria-label="次へ"
               >
                 <svg
-                  className="w-5 h-5 text-gray-800"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -120,12 +140,12 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
             {/* カルーセル */}
             <div
               ref={carouselRef}
-              className="flex overflow-x-scroll snap-x snap-mandatory scrollbar-hide gap-8 pb-4 carousel-container"
+              className="flex overflow-x-scroll snap-x snap-mandatory scrollbar-hide gap-4 sm:gap-6 md:gap-8 pb-4 carousel-container"
             >
               {works.map((work, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-full md:w-[calc(100%-2rem)] snap-center"
+                  className="flex-shrink-0 w-[90%] sm:w-full md:w-[calc(100%-2rem)] snap-center"
                 >
                   <div
                     onClick={() =>
@@ -134,22 +154,22 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
                         description: work.description,
                       })
                     }
-                    className="card cursor-pointer rounded-3xl transform hover:scale-105 transition-transform duration-300 h-full p-4 bg-white shadow-lg"
+                    className="card cursor-pointer rounded-3xl transform hover:scale-105 transition-transform duration-300 h-full p-4 sm:p-6 bg-white shadow-lg"
                   >
                     {/* 画像 */}
-                    <div className="relative w-full h-48 md:h-64 mb-4 rounded-3xl overflow-hidden bg-gray-100">
+                    <div className="relative w-full h-40 sm:h-48 md:h-64 mb-4 rounded-3xl overflow-hidden bg-gray-100">
                       <Image
                         src={work.image}
                         alt={work.title}
                         fill
                         className="object-contain rounded-3xl"
-                        sizes="(max-width: 768px) 100vw, 600px"
+                        sizes="(max-width: 640px) 90vw, (max-width: 768px) 100vw, 600px"
                         priority={index === 0}
                       />
                     </div>
 
                     {/* タイトル */}
-                    <h3 className="text-2xl text-center font-bold mt-2 mb-4 text-gray-800">
+                    <h3 className="text-lg sm:text-xl md:text-2xl text-center font-bold mt-2 mb-4 text-gray-800">
                       {work.title}
                     </h3>
 
@@ -158,7 +178,7 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
                       {work.tech.map((tech, i) => (
                         <span
                           key={i}
-                          className="bg-zunda-primary/20 text-zunda-dark px-3 py-1 rounded-full text-sm font-medium"
+                          className="bg-zunda-primary/20 text-zunda-dark px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium"
                         >
                           {tech}
                         </span>
@@ -171,7 +191,7 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
                         href={work.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block mt-3 px-6 py-2 bg-zunda-secondary text-white font-medium rounded-xl hover:bg-zunda-dark transition-colors duration-200"
+                        className="inline-block mt-3 px-4 sm:px-6 py-2 text-sm sm:text-base bg-zunda-secondary text-white font-medium rounded-xl hover:bg-zunda-dark transition-colors duration-200"
                       >
                         View Project
                       </a>
@@ -182,15 +202,15 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
             </div>
 
             {/* インジケーター */}
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="flex justify-center gap-2 mt-6 sm:mt-8">
               {works.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                  className={`h-2 sm:h-3 rounded-full transition-all duration-200 ${
                     index === currentIndex
-                      ? "bg-indigo-600 w-8"
-                      : "bg-gray-300 hover:bg-gray-400"
+                      ? "bg-indigo-600 w-6 sm:w-8"
+                      : "bg-gray-300 hover:bg-gray-400 w-2 sm:w-3"
                   }`}
                   aria-label={`スライド ${index + 1} へ移動`}
                 />
@@ -198,16 +218,6 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
             </div>
           </div>
         </div>
-
-        <style jsx>{`
-          .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-          }
-          .carousel-container {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-          }
-        `}</style>
       </section>
     </>
   );

@@ -78,7 +78,7 @@ export default function SkillsSection({ onSkillClick }: Props) {
   };
 
   return (
-    <section className="flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50 overflow-y-auto py-20">
+    <section className="flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50 overflow-y-auto pt-24 pb-20 sm:pt-28 md:pt-32">
       <div className="container mx-auto px-8">
         {/* タイトルとナビゲーションボタンを横並びに */}
         <div className="flex items-center justify-between mb-12 max-w-2xl mx-auto">

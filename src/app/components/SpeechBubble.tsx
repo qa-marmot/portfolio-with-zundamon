@@ -90,7 +90,7 @@ export default function SpeechBubble({
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-[360px] right-8 z-40 max-w-[20rem]">
+    <div className="hidden lg:block fixed bottom-[360px] right-8 z-40 max-w-[20rem]">
       <div className="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg p-2 relative animate-fade-in">
         <div className="absolute -bottom-2 right-12 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white/90" />
         <p className="text-gray-800 text-base leading-relaxed whitespace-pre-wrap">
