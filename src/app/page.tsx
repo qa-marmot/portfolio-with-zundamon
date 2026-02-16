@@ -50,7 +50,7 @@ export default function Home() {
   // セクション別台詞
   const sectionDialogues: Record<Section, SectionDialogue> = {
     intro: {
-      text: "こんにちはなのだ！\nずんだもんと一緒に見ていくのだ!\nこのサイトはPC視聴専用なのだ\n🔊 音声を聞きたい場合は右上のボタンをONにするのだ!",
+      text: "こんにちはなのだ！\nずんだもんと一緒に見ていくのだ!\nこのサイトはPC視聴専用なのだ\n 音声を聞きたい場合は🔊音声ボタンをONにするのだ!",
       armPose: 1.0,
     },
     works: {

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 interface VoiceToggleProps {
   enabled: boolean;
@@ -9,8 +9,8 @@ export default function VoiceToggle({ enabled, onToggle }: VoiceToggleProps) {
   return (
     <button
       onClick={onToggle}
-      className="fixed top-4 right-4 z-50 mt-16 bg-white rounded-full shadow-lg p-3 hover:shadow-xl transition-all duration-300 group"
-      aria-label={enabled ? '音声をオフにする' : '音声をオンにする'}
+      className="fixed z-50 mt-16 bg-white rounded-full shadow-lg p-3 hover:shadow-xl transition-all duration-300 group top-4 right-4 max-sm:bottom-4 max-sm:top-auto max-sm:right-4"
+      aria-label={enabled ? "音声をオフにする" : "音声をオンにする"}
     >
       <div className="relative w-8 h-8">
         {enabled ? (
@@ -46,7 +46,7 @@ export default function VoiceToggle({ enabled, onToggle }: VoiceToggleProps) {
         )}
       </div>
       <span className="absolute -bottom-8 right-0 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-        {enabled ? '音声ON' : '音声OFF'}
+        {enabled ? "音声ON" : "音声OFF"}
       </span>
     </button>
   );
