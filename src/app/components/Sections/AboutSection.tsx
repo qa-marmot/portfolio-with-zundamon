@@ -25,6 +25,10 @@ export default function AboutSection() {
             <p className="mb-4 sm:mb-2">
               特にReact/Next.jsを使用したモダンなWebアプリケーション開発、Python/Node.jsを用いたE2Eテスト自動化を学習中です。
             </p>
+            <p className="mb-4 sm:mb-2">
+              最近はWebサイト制作の副業を始めました。<br />
+              <a className="text-blue-600" href="https://tsukuru-web.com">・https://tsukuru-web.com</a>
+            </p>
           </div>
 
           {/* 下部: SNSリンク */}
