@@ -57,6 +57,14 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
       image: "/image/hair-famille.png",
       url: "https://hair-famille-website.vercel.app/",
     },
+    {
+      title: "Music School",
+      description:
+        "音楽教室のホームページで実際の運用を意識して作成したのだ! Astro + Tailwind CSS + microCMS で構築し、Cloudflare Pages にデプロイしたのだ!",
+      tech: ["Astro", "TypeScript", "Tailwindcss", "microCMS", "Cloudflare"],
+      image: "/image/astro-music-school.png",
+      url: "https://astro-music-school.pages.dev/",
+    },
   ];
 
   const carouselRef = useRef<HTMLDivElement>(null);
