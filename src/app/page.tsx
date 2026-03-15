@@ -62,15 +62,15 @@ export default function Home() {
       armPose: 0.0,
     },
     about: {
-      text: "QAエンジニアとして2年以上の経験があって、フロントからバックエンド、テストまで対応できるのだ。ReactやNext.jsでのWeb開発と、PythonやNode.jsでのテスト自動化を学びながら、UIや使いやすさにもこだわってるのだ!最近はセキュリティやLive2Dにも挑戦中なのだ!",
+      text: "QAエンジニアとして2年以上の経験があるのだ!AstroやNext.jsでのWeb開発と、PythonやNode.jsでのテスト自動化を学びながら、UIや使いやすさにもこだわってるのだ!最近はWebサイト制作の副業を始めたのだ!",
       armPose: 0.5,
     },
   };
 
   const skillSpeechMap = {
-    frontend: `フロントエンドなのだ!まずHTMLで構造を作って、CSSで見た目を整えるのだ。JavaScriptで動きをつけて、ReactやNext.jsで画面を効率よく組み立ててるのだ!TypeScriptで安全に開発して、Tailwind CSSでスタイルを管理してるのだ。必要に応じてjQueryも使うのだ!`,
+    frontend: `フロントエンドなのだ!まずHTMLで構造を作って、CSSで見た目を整えるのだ。JavaScriptで動きをつけて、AstroやNext.jsで画面を効率よく組み立ててるのだ!TypeScriptで安全に開発して、Tailwind CSSでスタイルを管理してるのだ。必要に応じてjQueryも使うのだ!`,
     backend: `バックエンドなのだ!Node.jsやPython、PHPを使って、サーバー側の処理を書くのだ。FastAPIで高速なAPIを作って、フロントエンドと連携したりしてるのだ。Supabaseを使って、データベースや認証もまとめて管理してるのだ！`,
-    devops: `開発を支える技術たちなのだ! Dockerで開発環境をそろえて、誰でも同じ環境で動かせるようにするのだ。GitHubでコードを管理して、PlaywrightやSeleniumでテストを自動化! デプロイは主にVercelとRenderなのだ!`,
+    devops: `開発を支える技術たちなのだ! Dockerで開発環境をそろえて、誰でも同じ環境で動かせるようにするのだ。GitHubでコードを管理して、PlaywrightやSeleniumでテストを自動化! デプロイは主にVercelとcloudflareなのだ!`,
   } as const;
 
   const LOCAL_VOICEVOX =
