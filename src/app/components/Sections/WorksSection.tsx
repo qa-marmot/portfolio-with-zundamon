@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
+import { getPrevIndex, getNextIndex } from "../../utils/carousel";
 
 interface WorksSectionProps {
   onWorkClick?: (work: { title: string; description: string }) => void;
@@ -82,13 +83,11 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
   };
 
   const handlePrevious = () => {
-    const newIndex = currentIndex > 0 ? currentIndex - 1 : works.length - 1;
-    scrollToIndex(newIndex);
+    scrollToIndex(getPrevIndex(currentIndex, works.length));
   };
 
   const handleNext = () => {
-    const newIndex = currentIndex < works.length - 1 ? currentIndex + 1 : 0;
-    scrollToIndex(newIndex);
+    scrollToIndex(getNextIndex(currentIndex, works.length));
   };
 
   return (
