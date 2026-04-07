@@ -34,6 +34,7 @@ export default function SkillsSection({ onSkillClick }: Props) {
         "PHP",
         "FastAPI",
         "Supabase",
+        "Hono"
       ],
     },
     {
@@ -42,9 +43,11 @@ export default function SkillsSection({ onSkillClick }: Props) {
       items: [
         "Docker",
         "GitHub",
+        "GitHub Actions",
         "Vercel",
-        "Render",
         "cloudflare",
+        "Vitest",
+        "Jest",
         "Playwright",
         "Selenium",
         "Jira",
