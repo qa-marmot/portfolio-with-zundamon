@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { getPrevIndex, getNextIndex } from "../../utils/carousel";
 
 type SkillType = "frontend" | "backend" | "devops";
 
@@ -72,13 +73,11 @@ export default function SkillsSection({ onSkillClick }: Props) {
   };
 
   const handlePrevious = () => {
-    const newIndex = currentIndex > 0 ? currentIndex - 1 : skills.length - 1;
-    scrollToIndex(newIndex);
+    scrollToIndex(getPrevIndex(currentIndex, skills.length));
   };
 
   const handleNext = () => {
-    const newIndex = currentIndex < skills.length - 1 ? currentIndex + 1 : 0;
-    scrollToIndex(newIndex);
+    scrollToIndex(getNextIndex(currentIndex, skills.length));
   };
 
   return (

@@ -9,14 +9,15 @@ import SkillsSection from "./components/Sections/SkillsSection";
 import AboutSection from "./components/Sections/AboutSection";
 import SpeechBubble from "./components/SpeechBubble";
 import VoiceToggle from "./components/VoiceToggle";
+import type { Section } from "./utils/section";
+import { getSectionFromScroll, SECTIONS } from "./utils/section";
+import { buildWorkSpeechText } from "./utils/speech";
 
 const VOICEVOX_ENDPOINT =
   process.env.NEXT_PUBLIC_VOICEVOX_ENDPOINT ?? "http://localhost:50021";
 const Live2DCharacter = dynamic(() => import("./components/Live2DCharacter"), {
   ssr: false,
 });
-
-type Section = "intro" | "works" | "skills" | "about";
 
 interface SectionDialogue {
   text: string;
@@ -306,9 +307,7 @@ export default function Home() {
     isPrecachingRef.current = true;
     console.log("🔊 Precaching section voices...");
 
-    const sections: Section[] = ["intro", "works", "skills", "about"];
-
-    for (const section of sections) {
+    for (const section of SECTIONS) {
       const text = sectionDialogues[section].text;
       const cacheKey = `section_${section}`;
 
@@ -364,7 +363,7 @@ export default function Home() {
 
       cancelCurrentSpeech();
 
-      const text = `${work.title}なのだ！\n${work.description}`;
+      const text = buildWorkSpeechText(work);
 
       setSpeechText(text);
       setShowSpeech(true);
@@ -400,11 +399,7 @@ export default function Home() {
     const onScroll = () => {
       if (isWorkSpeechRef.current) return;
 
-      const center = window.scrollY + window.innerHeight / 2;
-      const idx = Math.floor(center / window.innerHeight);
-
-      const sections: Section[] = ["intro", "works", "skills", "about"];
-      const s = sections[Math.min(idx, sections.length - 1)];
+      const s = getSectionFromScroll(window.scrollY, window.innerHeight);
 
       if (s !== currentSection) {
         handleSectionChange(s);
