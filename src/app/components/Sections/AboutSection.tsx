@@ -23,7 +23,7 @@ export default function AboutSection() {
               フロントエンドからバックエンドの実装、テストまで幅広く対応可能です。
             </p>
             <p className="mb-4 sm:mb-2">
-              特にReact/Next.jsを使用したモダンなWebアプリケーション開発、Python/Node.jsを用いたE2Eテスト自動化を学習中です。
+              特にReact/Next.jsを使用したモダンなWebアプリケーション開発、Playwrightを用いたE2Eテスト自動化を学習中です。
             </p>
             <p className="mb-4 sm:mb-2">
               最近はWebサイト制作の副業を始めました。<br />
