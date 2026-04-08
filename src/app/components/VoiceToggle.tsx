@@ -9,7 +9,7 @@ export default function VoiceToggle({ enabled, onToggle }: VoiceToggleProps) {
   return (
     <button
       onClick={onToggle}
-      className="fixed z-50 mt-16 bg-white rounded-full shadow-lg p-3 hover:shadow-xl transition-all duration-300 group top-4 right-4 max-sm:bottom-4 max-sm:top-auto max-sm:right-4"
+      className="fixed z-50 bg-white rounded-full shadow-lg p-3 hover:shadow-xl transition-all duration-300 group top-20 right-4 max-sm:bottom-4 max-sm:top-auto max-sm:right-4"
       aria-label={enabled ? "音声をオフにする" : "音声をオンにする"}
     >
       <div className="relative w-8 h-8">

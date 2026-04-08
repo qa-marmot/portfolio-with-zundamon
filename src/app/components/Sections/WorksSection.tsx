@@ -91,7 +91,6 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
   };
 
   return (
-    <>
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-32 md:pb-24">
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
           {/* タイトルとナビゲーションボタン */}
@@ -226,6 +225,5 @@ export default function WorksSection({ onWorkClick }: WorksSectionProps) {
           </div>
         </div>
       </section>
-    </>
   );
 }

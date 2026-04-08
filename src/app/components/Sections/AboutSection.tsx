@@ -2,7 +2,7 @@
 
 export default function AboutSection() {
   return (
-    <section className="flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 pt-20 sm:pt-24 md:pt-28 min-h-screen">
+    <section className="flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 pt-20 sm:pt-24 md:pt-28">
       <div className="container mx-auto px-6 max-w-4xl flex justify-center">
         <div className="card bg-white rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg w-full
                         overflow-auto max-h-[90vh] md:overflow-visible md:max-h-none">
@@ -17,7 +17,7 @@ export default function AboutSection() {
           </div>
 
           {/* 中央: 自己紹介 */}
-          <div className="prose prose-lg max-w-none text-gray-700 mb-6 sm:mb-3">
+          <div className="prose prose-lg max-w-none text-gray-700 mb-6 sm:mb-4">
             <p className="mb-4 sm:mb-2">
               QAエンジニアとして2年以上の経験があります。
               フロントエンドからバックエンドの実装、テストまで幅広く対応可能です。
@@ -29,6 +29,46 @@ export default function AboutSection() {
               最近はWebサイト制作の副業を始めました。<br />
               <a className="text-blue-600" href="https://tsukuru-web.com">・https://tsukuru-web.com</a>
             </p>
+          </div>
+
+          {/* OSSプロジェクト: seo-guardian */}
+          <div className="mb-6 sm:mb-4 p-4 sm:p-5 bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl border border-gray-200">
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">OSS Project</p>
+
+            <div className="flex items-center gap-2 mb-2 flex-wrap">
+              <span className="text-lg font-bold text-gray-800 font-mono">seo-guardian</span>
+              <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">MIT</span>
+              <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">npm</span>
+              <span className="text-xs bg-orange-50 text-orange-600 border border-orange-200 px-2 py-0.5 rounded-full font-medium">Built with Claude Code</span>
+            </div>
+
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              「デプロイ後にSEO違反に気づく」という課題を解消するため、CI/CDパイプラインに組み込むSEO品質ゲートツールを自作しました。
+              Playwright（SPAのフルレンダリング）とcheerio（静的サイトの高速解析）を使い分け、14項目のSEOシグナルをルール別に
+              <code className="text-xs bg-gray-200 rounded px-1 mx-0.5">error</code>/<code className="text-xs bg-gray-200 rounded px-1 mx-0.5">warning</code>で管理。
+              違反があれば exit code 1 でデプロイをブロックします。
+              設定は<code className="text-xs bg-gray-200 rounded px-1 mx-0.5">seo.config.ts</code>に集約し、Globパターンでページ単位の上書きも可能です。
+            </p>
+
+            <div className="flex flex-wrap gap-1.5 mb-4">
+              {["Playwright", "TypeScript", "cheerio", "JUnit XML", "CI/CD"].map((tag) => (
+                <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-white border border-gray-300 text-gray-600 font-medium">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <a
+              href="https://github.com/qa-marmot/seo-guardian"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 bg-white border border-gray-300 hover:border-gray-400 rounded-lg px-3 py-1.5 transition-all duration-200 hover:shadow-sm"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              qa-marmot/seo-guardian
+            </a>
           </div>
 
           {/* 下部: SNSリンク */}
