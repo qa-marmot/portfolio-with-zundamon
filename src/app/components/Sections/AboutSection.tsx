@@ -25,10 +25,17 @@ export default function AboutSection() {
             <p className="mb-4 sm:mb-2">
               特にReact/Next.jsを使用したモダンなWebアプリケーション開発、Playwrightを用いたE2Eテスト自動化を学習中です。
             </p>
-            <p className="mb-4 sm:mb-2">
+            <p className="mb-2">
               最近はWebサイト制作の副業を始めました。<br />
               <a className="text-blue-600" href="https://tsukuru-web.com">・https://tsukuru-web.com</a>
             </p>
+            <div className="flex flex-wrap gap-1.5 mb-2">
+              {["Astro", "Hono", "TypeScript", "Tailwind CSS", "Cloudflare", "D1"].map((tag) => (
+                <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 font-medium">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* OSSプロジェクト: seo-guardian */}
